@@ -45,52 +45,67 @@
     </a>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-gray-800">
+    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center justify-between h-16 md:h-20">
                 <div class="flex-shrink-0 flex items-center gap-2">
-                    <i class="fa-solid fa-fire-flame-curved text-primary text-2xl"></i>
+                    <i class="fa-solid fa-fire-flame-curved text-primary text-2xl animate-pulse"></i>
                     <span class="font-bold text-xl tracking-wider">LAS <span class="text-primary">MANDIRI</span></span>
                 </div>
+                <!-- Desktop Menu -->
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#beranda" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Beranda</a>
-                        <a href="#keunggulan" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Keunggulan</a>
-                        <a href="#layanan" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Layanan</a>
-                        <a href="#material" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Bahan</a>
-                        <a href="#portofolio" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Portofolio</a>
-                        <a href="#faq" class="hover:text-primary transition px-3 py-2 rounded-md text-sm font-medium">Tanya Jawab</a>
-                        <a href="#kalkulator" class="bg-primary text-dark hover:bg-primary_hover transition px-4 py-2 rounded-md text-sm font-bold shadow-lg shadow-primary/30">Hitung Harga</a>
+                    <div class="ml-10 flex items-baseline space-x-6 lg:space-x-8">
+                        <a href="#beranda" class="hover:text-primary transition px-2 py-2 rounded-md text-sm lg:text-base font-medium">Beranda</a>
+                        <a href="#keunggulan" class="hover:text-primary transition px-2 py-2 rounded-md text-sm lg:text-base font-medium">Keunggulan</a>
+                        <a href="#layanan" class="hover:text-primary transition px-2 py-2 rounded-md text-sm lg:text-base font-medium">Layanan</a>
+                        <a href="#portofolio" class="hover:text-primary transition px-2 py-2 rounded-md text-sm lg:text-base font-medium">Portofolio</a>
+                        <a href="#kalkulator" class="bg-primary text-dark hover:bg-primary_hover transition px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 glow-effect">Hitung Harga</a>
                     </div>
                 </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-b border-gray-800 shadow-2xl absolute w-full left-0 top-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#beranda" class="mobile-link text-gray-300 hover:text-primary block px-3 py-3 rounded-md text-base font-medium border-b border-gray-800/50">Beranda</a>
+                <a href="#keunggulan" class="mobile-link text-gray-300 hover:text-primary block px-3 py-3 rounded-md text-base font-medium border-b border-gray-800/50">Keunggulan</a>
+                <a href="#layanan" class="mobile-link text-gray-300 hover:text-primary block px-3 py-3 rounded-md text-base font-medium border-b border-gray-800/50">Layanan</a>
+                <a href="#portofolio" class="mobile-link text-gray-300 hover:text-primary block px-3 py-3 rounded-md text-base font-medium border-b border-gray-800/50">Portofolio</a>
+                <a href="#kalkulator" class="mobile-link bg-primary text-dark block px-4 py-3 rounded-lg text-center font-bold mt-4 shadow-lg shadow-primary/20">Hitung Harga</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="beranda" class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 fade-in">
-        <div class="flex-1 space-y-6">
-            <div class="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-2">
+    <section id="beranda" class="pt-24 md:pt-36 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 fade-in">
+        <div class="flex-1 space-y-5 md:space-y-6 text-center lg:text-left mt-8 lg:mt-0">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs md:text-sm font-semibold mb-2 shadow-[0_0_15px_rgba(245,158,11,0.15)]">
                 <i class="fa-solid fa-medal mr-2"></i>Garansi Konstruksi & Anti-Karat
             </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                 Wujudkan Rumah Aman & Estetik dengan <span class="text-primary">Ahli Las Berpengalaman</span>
             </h1>
-            <p class="text-gray-400 text-lg max-w-xl">
-                Melayani pembuatan Kanopi, Pagar Minimalis, Terali, hingga Neon Box. Konstruksi kokoh, material SNI tebal, pengerjaan presisi, dan **Survey Lokasi 100% GRATIS**.
+            <p class="text-gray-400 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+                Melayani pembuatan Kanopi, Pagar Minimalis, Terali, hingga Neon Box. Konstruksi kokoh, material SNI tebal, pengerjaan presisi, dan <strong>Survey Lokasi 100% GRATIS</strong>.
             </p>
-            <div class="flex flex-wrap gap-4 pt-2">
-                <a href="#kalkulator" class="bg-primary text-dark font-bold px-6 py-3.5 rounded-lg hover:bg-primary_hover transition glow-effect text-center w-full sm:w-auto">
+            <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+                <a href="#kalkulator" class="bg-primary text-dark font-bold px-6 py-3.5 rounded-xl hover:bg-primary_hover transition glow-effect text-center w-full sm:w-auto shadow-xl shadow-primary/20">
                     Hitung Estimasi Biaya
                 </a>
-                <a href="https://wa.me/6281234567890?text=Halo%20Bengkel%20Las%20Mandiri,%20saya%20ingin%20konsultasi%20dan%20request%20survey%20lokasi%20gratis." target="_blank" class="border border-gray-600 bg-card hover:bg-gray-700 font-semibold px-6 py-3.5 rounded-lg transition flex items-center justify-center gap-2 w-full sm:w-auto">
-                    <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i> Konsultasi WA (Survey Gratis)
+                <a href="https://wa.me/6281234567890?text=Halo%20Bengkel%20Las%20Mandiri,%20saya%20ingin%20konsultasi%20dan%20request%20survey%20lokasi%20gratis." target="_blank" class="border border-gray-600 bg-card/80 backdrop-blur hover:bg-gray-700 font-semibold px-6 py-3.5 rounded-xl transition flex items-center justify-center gap-2 w-full sm:w-auto">
+                    <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i> Konsultasi WA
                 </a>
             </div>
         </div>
-        <div class="flex-1 w-full relative">
-            <div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800" alt="Proses Pengelasan Profesional" class="relative rounded-2xl shadow-2xl border border-gray-700 object-cover w-full h-[400px]">
+        <div class="flex-1 w-full relative px-4 sm:px-0">
+            <div class="absolute inset-0 bg-primary/20 blur-[60px] rounded-full"></div>
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800" alt="Proses Pengelasan Profesional" class="relative rounded-3xl shadow-2xl border border-gray-700/50 object-cover w-full h-[300px] md:h-[450px]">
         </div>
     </section>
 
@@ -127,41 +142,54 @@
     </section>
 
     <!-- Layanan Section -->
-    <section id="layanan" class="py-20 bg-card/40">
+    <section id="layanan" class="py-12 md:py-24 bg-card/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-10 md:mb-16">
                 <h2 class="text-3xl font-bold mb-4">Layanan Konstruksi Las</h2>
-                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 <!-- Card 1 -->
-                <div class="bg-card border border-gray-700 rounded-xl overflow-hidden hover:border-primary/50 transition duration-300 group">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Kanopi Rumah" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Kanopi Minimalis & Kaca</h3>
-                        <p class="text-gray-400 text-sm mb-4">Pemasangan kanopi carport rangka tunggal atau double hollow dengan atap Alderon, Spandek, atau Akrilik.</p>
-                        <span class="text-primary font-semibold text-sm">Mulai Rp 350.000 / m²</span>
+                <div class="bg-card border border-gray-700/50 rounded-2xl overflow-hidden hover:border-primary/50 transition duration-300 group shadow-lg hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" alt="Kanopi Rumah" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-6 md:p-8 flex-1 flex flex-col relative -mt-16 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Kanopi Minimalis & Kaca</h3>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Pemasangan kanopi carport rangka tunggal atau double hollow dengan atap Alderon, Spandek, atau Akrilik untuk keteduhan elegan.</p>
+                        <div class="inline-block bg-dark/80 backdrop-blur rounded-lg px-4 py-2 border border-primary/20 self-start">
+                            <span class="text-primary font-bold text-sm md:text-base">Mulai Rp 350.000 / m²</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-card border border-gray-700 rounded-xl overflow-hidden hover:border-primary/50 transition duration-300 group">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Pagar Rumah" class="w-full h-48 object-cover group-hover:scale-105 transition duration-500">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Pagar Besi & Pintu Gerbang</h3>
-                        <p class="text-gray-400 text-sm mb-4">Pagar rumah dorong, lipat, minimalis modern, kombinasi kayu GRC wood plank yang kokoh dan indah.</p>
-                        <span class="text-primary font-semibold text-sm">Mulai Rp 400.000 / m²</span>
+                <div class="bg-card border border-gray-700/50 rounded-2xl overflow-hidden hover:border-primary/50 transition duration-300 group shadow-lg hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col">
+                    <div class="relative overflow-hidden h-56">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" alt="Pagar Rumah" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-90"></div>
+                    </div>
+                    <div class="p-6 md:p-8 flex-1 flex flex-col relative -mt-16 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Pagar Besi & Pintu Gerbang</h3>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Pagar rumah dorong, lipat, minimalis modern, kombinasi kayu GRC wood plank yang kokoh, anti-karat, dan aman.</p>
+                        <div class="inline-block bg-dark/80 backdrop-blur rounded-lg px-4 py-2 border border-primary/20 self-start">
+                            <span class="text-primary font-bold text-sm md:text-base">Mulai Rp 400.000 / m²</span>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-card border border-gray-700 rounded-xl overflow-hidden hover:border-primary/50 transition duration-300 group">
-                    <div class="w-full h-48 bg-gray-800 flex items-center justify-center relative overflow-hidden">
-                        <i class="fa-solid fa-lightbulb text-5xl text-gray-600 group-hover:text-primary transition duration-500 relative z-10"></i>
+                <div class="bg-card border border-gray-700/50 rounded-2xl overflow-hidden hover:border-primary/50 transition duration-300 group shadow-lg hover:shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col">
+                    <div class="relative overflow-hidden h-56 bg-gray-800 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-6xl text-gray-600 group-hover:text-primary transition duration-500 relative z-10 group-hover:scale-110"></i>
+                        <div class="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-90"></div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Neon Box & Kerangka Reklame</h3>
-                        <p class="text-gray-400 text-sm mb-4">Jasa pembuatan kerangka besi neon box kafe/toko, papan billboard, dan teralis pengaman jendela.</p>
-                        <span class="text-primary font-semibold text-sm">Harga Custom Sesuai Desain</span>
+                    <div class="p-6 md:p-8 flex-1 flex flex-col relative -mt-16 z-10">
+                        <h3 class="text-xl md:text-2xl font-bold mb-3 text-white">Neon Box & Kerangka Reklame</h3>
+                        <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Jasa pembuatan kerangka besi neon box kafe/toko, papan billboard raksasa, dan teralis pengaman jendela presisi tinggi.</p>
+                        <div class="inline-block bg-dark/80 backdrop-blur rounded-lg px-4 py-2 border border-primary/20 self-start">
+                            <span class="text-primary font-bold text-sm md:text-base">Harga Custom Sesuai Desain</span>
+                        </div>
                     </div>
                 </div>
             </div>
