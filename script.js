@@ -72,9 +72,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if(!currentOrder) return;
         
         // TODO: Ganti dengan nomor WhatsApp Ayah (gunakan format 62 tanpa + atau 0)
-        const waNumber = '6281234567890'; 
+        const waNumber = '6285263033507'; 
         
-        const message = `Halo Bengkel Las Mandiri, saya melihat website Anda dan tertarik menjadwalkan *SURVEY LOKASI GRATIS*.
+        const message = `Halo Yukagawa Advertising, saya melihat website Anda dan tertarik menjadwalkan *SURVEY LOKASI GRATIS*.
 
 *Data Estimasi Awal dari Website:*
 🛠️ Layanan: ${currentOrder.namaLayanan}
