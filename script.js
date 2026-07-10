@@ -89,3 +89,15 @@ Tolong beri tahu saya kapan Ayah/Teknisi bisa datang untuk mengukur pasti dan be
         window.open(waUrl, '_blank');
     });
 });
+
+    const btnLoadMore = document.getElementById('btn-load-more');
+    const hiddenItems = document.querySelectorAll('.hidden-portfolio');
+    if(btnLoadMore) {
+        btnLoadMore.addEventListener('click', () => {
+            hiddenItems.forEach(item => {
+                item.style.display = 'block';
+                item.classList.add('fade-in');
+            });
+            document.getElementById('btn-load-more-container').style.display = 'none';
+        });
+    }
